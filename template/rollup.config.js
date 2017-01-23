@@ -41,6 +41,6 @@ export default {
   entry: 'src/index.js',
   dest: 'dist/build.js',
   sourceMap: true,
-  format: {{ jsformat }},
+  format: '{{ jsformat }}',
   plugins
 }
