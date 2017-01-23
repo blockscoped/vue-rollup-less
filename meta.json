@@ -1,19 +1,26 @@
 {
-  "schema": {
+  "prompts": {
     "name": {
       "type": "string",
       "required": true,
-      "label": "Project name"
+      "message": "Project name"
     },
     "description": {
       "type": "string",
       "required": true,
-      "label": "Project description",
+      "message": "Project description",
       "default": "A Vue.js 2.0 project"
     },
     "author": {
       "type": "string",
-      "label": "Author"
+      "message": "Author"
+    },
+    "jsoutput": {
+      "type": "list",
+      "message": "Format for bundled JS?",
+      "choices": [
+        "amd", "cjs", "es", "iife", "umd"
+      ]
     }
   }
 }
