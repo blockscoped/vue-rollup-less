@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
   plugins.push(replace({
     'process.env.NODE_ENV': JSON.stringify( 'production' )
   }))
-  plugins.push(uglify())
+  // plugins.push(uglify())
 }
 
 if (process.env.NODE_ENV === 'development') {
@@ -38,7 +38,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export default {
-  entry: 'src/main.js',
+  entry: 'src/app.js',
   dest: 'dist/build.js',
   sourceMap: true,
   plugins
