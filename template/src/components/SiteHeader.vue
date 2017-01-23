@@ -74,7 +74,7 @@ export default {
     width: 75px;
     text-align: center;
     text-indent: -9999px;
-    background: url('../assets/logo.png') center center no-repeat;
+    background: url('assets/logo.png') center center no-repeat;
     background-size: 100% auto;
 
     @media @760 {
