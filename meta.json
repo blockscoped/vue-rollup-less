@@ -15,12 +15,17 @@
       "type": "string",
       "message": "Author"
     },
-    "jsoutput": {
+    "jsformat": {
       "type": "list",
       "message": "Format for bundled JS?",
       "choices": [
-        "amd", "cjs", "es", "iife", "umd"
-      ]
+        "amd",
+        "cjs",
+        "es",
+        "iife",
+        "umd"
+      ],
+      "default": "es"
     }
   }
 }
