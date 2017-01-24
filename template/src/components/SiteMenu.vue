@@ -52,7 +52,6 @@ export default {
     top: 0;
     width: auto;
     padding: 0;
-    margin-top: -@global-navigation-height;
     overflow: visible;
     background: @site-menu-background-colour-desktop;
   }
