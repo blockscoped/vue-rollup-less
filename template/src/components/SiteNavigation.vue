@@ -2,11 +2,11 @@
   <nav class="site-navigation">
     <ul class="no-bullet">
       <li class="home">
-        <router-link to="/">Home</router-link>
+        <router-link to="/" class="fa fa-home">Home</router-link>
       </li>
       <!-- TODO: get these from placements service when it's ready -->
-      <li class="movies">
-        <router-link to="/about">About</router-link>
+      <li class="about">
+        <router-link to="/about" class="fa fa-id-card">About</router-link>
       </li>
     </ul>
   </nav>
@@ -37,15 +37,7 @@ export default {
       padding: 0 16px;
       height: 48px;
 
-      @media @800 {
-        height: 56px;
-        padding: 0 24px;
-        font-size: @site-nav-font-size--800;
-      }
-
       &:before {
-        content: "";
-        font-family: FontAwesome;
         display: inline-block;
         font-size: @font-size-l;
         color: currentColor;
@@ -55,7 +47,11 @@ export default {
         text-align: initial;
       }
 
-      .clicked & {
+      @media @800 {
+        height: 56px;
+        padding: 0 24px;
+        font-size: @site-nav-font-size--800;
+
         &:hover {
           color: @site-nav-font-color-hover;
         }
@@ -64,18 +60,6 @@ export default {
       &:active,
       .selected& {
         color: @site-nav-font-color-active;
-      }
-    }
-    // TODO: set these via html fa-xxx class
-    &.home {
-      a:before {
-        content: "\f015";
-      }
-    }
-
-    &.movies {
-      a:before {
-        content: "\f008";
       }
     }
   }
