@@ -35,7 +35,7 @@ export default {
   justify-content: center;
   height: @site-header-height;
   margin: 0 auto auto;
-  padding: 0 20px;
+  padding: 0 16px;
   position: relative;
   top: 0;
   transition: transform 0.5s ease-out;
@@ -47,16 +47,15 @@ export default {
     position: fixed;
   }
 
-  @media @760 {
-    height: @site-header-height--760;
+  @media @800 {
+    height: @site-header-height--800;
+    padding: 0 24px;
   }
 
-  @media @1000 {
-    height: @site-header-height--1000;
-
+  @media @1040 {
     &.desktop {
       padding-top: @global-navigation-height;
-      height: calc(@site-header-height--1000 + @global-navigation-height);
+      height: calc(@site-header-height--800 + @global-navigation-height);
 
       &:before {
         content: '';
@@ -74,33 +73,30 @@ export default {
     width: 75px;
     text-align: center;
     text-indent: -9999px;
-    background: url('assets/images/logo.png') center center no-repeat;
-    background-size: auto 85%;
+    background: url("/images/logo.svg") center center no-repeat;
+    background-size: 100% auto;
 
-    @media @760 {
+    @media @800 {
       width: 100px;
+    }
+
+    @media @1040 {
+      width: 120px;
     }
   }
 
   .button--icon {
     cursor: pointer;
-    display: block;
-    height: 40px;
-    left: 12px;
+    left: 8px;
     margin: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
     z-index: 5;
     color: @site-header-icon-button-font-colour;
     background: @site-header-icon-button-background-colour;
 
-    @media @760 {
-      left: 20px;
-    }
-
-    @media @1000 {
+    @media @1040 {
       .desktop& {
         display: none;
       }
@@ -108,11 +104,7 @@ export default {
 
     &.right {
       left: auto;
-      right: 12px;
-
-      @media @760 {
-        right: 20px;
-      }
+      right: 8px;
     }
 
     &.fa-search:before {

@@ -28,7 +28,7 @@ export default {
   right: 0;
   top: @site-header-height;
   height: 100%;
-  width: 250px;
+  width: 240px;
   transform: translate3d(100%, 0, 0);
   transition: transform 0.5s ease-out;
   transition-delay: 0.015s;
@@ -38,17 +38,14 @@ export default {
   overflow-x: hidden;
   overflow-y: auto;
 
-  @media @760 {
-    top: @site-header-height--760;
-  }
-
-  @media @1000 {
-    top: @site-header-height--1000;
+  @media @800 {
+    top: @site-header-height--800;
   }
 
   #show-search:checked ~ &,
   #show-search:checked ~ .site-header .site-menu & {
     transform: translate3d(0, 0, 0);
+    position: absolute;
   }
 
   form {
@@ -73,7 +70,6 @@ export default {
       top: 0;
       height: 100%;
       width: 43px;
-      color: transparent;
       font-size: 0;
       background: none;
     }
@@ -86,9 +82,11 @@ export default {
     top: auto;
     order: 4;
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 15%;
     justify-content: flex-end;
     align-self: center;
+    width: auto;
+    z-index: 1;
 
     form {
       display: flex;

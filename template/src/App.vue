@@ -64,6 +64,32 @@ html {
 }
 
 body {
+  min-height: 100%;
+  position: relative;
+  font-family: @body-font;
+  font-weight: @body-font-weight;
+  background: @site-background-colour;
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  .navigation-open &,
+  .search-open & {
+    overflow: hidden;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
   height: 100%;
   position: relative;
   font-family: @body-font;
@@ -74,7 +100,6 @@ body {
 }
 
 #app {
-  min-height: 100%;
   position: relative;
   font-family: @body-font;
   font-weight: @body-font-weight;
@@ -83,12 +108,37 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   flex: 1 0 auto;
+  min-height: 100%;
+  height: 100vh;
+  width: 100%;
+
+  .navigation-open &,
+  .search-open & {
+    overflow: hidden;
+  }
 }
 
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  overflow: hidden;
+  padding: 0 16px;
+
+  @media @530 {
+    padding: 0 24px;
+  }
+
+  @media @800 {
+    padding: 0 40px;
+  }
+
+  .site-header.fixed ~ & {
+    padding-top: @site-header-height;
+
+    @media @800 {
+      padding-top: @site-header-height--800;
+    }
+  }
 }
 </style>

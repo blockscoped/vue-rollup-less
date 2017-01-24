@@ -16,12 +16,12 @@ export default {
 
 .site-menu {
   overflow-y: auto;
-  position: fixed;
+  position: absolute;
   box-sizing: border-box;
   left: 0;
   top: @site-header-height;
   height: 100%;
-  width: 250px;
+  width: 240px;
   transform: translate3d(-100%, 0, 0);
   transition: transform 0.5s ease-out;
   transition-delay: 0.015s;
@@ -31,12 +31,8 @@ export default {
   overflow-y: auto;
   z-index: 5;
 
-  @media @760 {
-    top: @site-header-height--760;
-  }
-
-  @media @1000 {
-    top: @site-header-height--1000;
+  @media @800 {
+    top: @site-header-height--800;
   }
 
   #show-navigation:checked ~ &,
@@ -59,13 +55,6 @@ export default {
     margin-top: -@global-navigation-height;
     overflow: visible;
     background: @site-menu-background-colour-desktop;
-
-    .placeholder {
-      order: 1;
-      height: @global-navigation-height;
-      flex: 1 1 50%;
-    }
   }
 }
-
 </style>

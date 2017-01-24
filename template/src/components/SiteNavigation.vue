@@ -31,19 +31,28 @@ export default {
       font-size: @site-nav-font-size;
       color: @site-nav-font-color;
       font-weight: @site-nav-font-size-weight;
-      display: block;
-      padding: 18px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 16px;
+      height: 48px;
+
+      @media @800 {
+        height: 56px;
+        padding: 0 24px;
+        font-size: @site-nav-font-size--800;
+      }
 
       &:before {
         content: "";
         font-family: FontAwesome;
         display: inline-block;
-        font-size: @font-size-xl;
+        font-size: @font-size-l;
         color: currentColor;
         vertical-align: top;
-        margin-right: 10px;
-        width: 20px;
-        text-align: center;
+        margin-right: 8px;
+        width: 32px;
+        text-align: initial;
       }
 
       .clicked & {
@@ -105,7 +114,6 @@ export default {
     flex-grow: 1;
     order: 3;
     flex-basis: 50%;
-    height: 75px;
     padding: 0 3%;
     display: flex;
 
@@ -117,10 +125,19 @@ export default {
         border: none;
         display: flex;
 
+        &.non-desktop {
+          display: none;
+        }
+
         a {
           display: flex;
           align-items: center;
           font-weight: @site-nav-font-size-weight-desktop;
+          padding: 0 16px;
+
+          @media @800 {
+            height: @site-header-height--800;
+          }
 
           &:before {
             display: none;
