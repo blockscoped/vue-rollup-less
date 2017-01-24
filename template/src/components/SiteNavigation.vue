@@ -78,36 +78,6 @@ export default {
         content: "\f008";
       }
     }
-
-    &.tv-shows {
-      a:before {
-        content: "\f26c";
-      }
-    }
-
-    &.kids {
-      a:before {
-        content: "\f1ae";
-      }
-    }
-
-    &.live {
-      a:before {
-        content: "\f017";
-      }
-    }
-
-    &.rentals {
-      a:before {
-        content: "\f145";
-      }
-    }
-
-    &.sport {
-      a:before {
-        content: "\f1e3";
-      }
-    }
   }
 
   .site-header & {

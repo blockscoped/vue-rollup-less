@@ -52,23 +52,6 @@ export default {
     padding: 0 24px;
   }
 
-  @media @1040 {
-    &.desktop {
-      padding-top: @global-navigation-height;
-      height: calc(@site-header-height--800 + @global-navigation-height);
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: @global-navigation-height;
-        background: @global-navigation-background-colour;
-      }
-    }
-  }
-
   .header-brand {
     width: 75px;
     text-align: center;
@@ -78,10 +61,6 @@ export default {
 
     @media @800 {
       width: 100px;
-    }
-
-    @media @1040 {
-      width: 120px;
     }
   }
 
