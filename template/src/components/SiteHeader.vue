@@ -1,13 +1,13 @@
 <template>
   <header :class="[{ desktop : isDesktop}, 'site-header']">
-    <label v-if="!isDesktop" for="show-navigation" class="button--icon fa-bars">Menu</label>
+    <label v-if="!isDesktop" for="show-navigation" class="button--icon no-hover fa fa-bars">Menu</label>
     <a href="#" class="header-brand">Home</a>
     <site-menu v-if="isDesktop">
       <div class="placeholder"></div>
       <site-navigation></site-navigation>
       <site-search></site-search>
     </site-menu>
-    <label v-if="!isDesktop" for="show-search" class="button--icon right fa-search">Search</label>
+    <label v-if="!isDesktop" for="show-search" class="button--icon right no-hover fa fa-search">Search</label>
   </header>
 </template>
 
