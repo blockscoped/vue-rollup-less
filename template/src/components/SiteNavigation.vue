@@ -38,6 +38,7 @@ export default {
       height: 48px;
 
       &:before {
+        font-family: FontAwesome;
         display: inline-block;
         font-size: @font-size-l;
         color: currentColor;
