@@ -3,7 +3,7 @@
   "description": "{{ description }}",
   "author": "{{ author }}",
   "scripts": {
-    "copy": "ncp src/assets dist/assets",
+    "copy": "ncp src/assets dist/assets && ncp node_modules/font-awesome/fonts dist/assets/fonts",
     "build": "npm run copy && cross-env NODE_ENV=production rollup -c",
     "dev": "npm run copy && cross-env NODE_ENV=development rollup -cw",
     "watch": "rollup -cw"
