@@ -17,7 +17,7 @@
     },
     "jsformat": {
       "type": "list",
-      "message": "Format for bundled JS?",
+      "message": "Format for bundled JS? (Can be changed later in rollup.config)",
       "choices": [
         "amd",
         "cjs",
@@ -26,6 +26,20 @@
         "umd"
       ],
       "default": "es"
+    },
+    "lint": {
+      "type": "confirm",
+      "message": "Do you want linting?"
+    },
+    "lintConfig": {
+      "when": "lint",
+      "type": "list",
+      "message": "Pick an eslint config",
+      "choices": [
+        "vue"
+        "airbnb",
+        "none"
+      ]
     }
   }
 }

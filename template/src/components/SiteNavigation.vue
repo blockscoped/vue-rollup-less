@@ -4,9 +4,8 @@
       <li class="home">
         <router-link to="/" class="fa fa-home">Home</router-link>
       </li>
-      <!-- TODO: get these from placements service when it's ready -->
       <li class="about">
-        <router-link to="/about" class="fa fa-id-card">About</router-link>
+        <router-link to="/about" class="fa fa-book">About</router-link>
       </li>
     </ul>
   </nav>

@@ -1,0 +1,8 @@
+{
+{{#if lint}}
+  "extends": ["vue"],
+{{/if}}
+{{#if_eq lintConfig "vue"}}
+  "plugins": ["vue"]
+{{/if_eq}}
+}
