@@ -1,6 +1,11 @@
 {
 {{#if lint}}
+{{#if_eq lintConfig "vue"}}
   "extends": ["vue"],
+{{/if_eq}}
+{{#if_eq lintConfig "airbnb"}}
+  "extends": ["airbnb"],
+{{/if_eq}}
 {{/if}}
 {{#if_eq lintConfig "vue"}}
   "plugins": ["vue"]
