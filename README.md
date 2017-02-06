@@ -31,3 +31,13 @@ npm run dev
   - Production build with HTML/CSS/JS minification.
   - extract [css](https://github.com/thgh/rollup-plugin-css-only)
 
+
+
+### TODO:
+
+- [x] Add options for eslint support
+- [x] Allow passing of plugins to less.render()
+- [ ] Add support for CSS source maps
+- [ ] Add option to use .scss/.styl
+- [ ] Add linting for styles
+- [ ] Add option for unit testing
