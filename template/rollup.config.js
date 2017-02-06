@@ -1,5 +1,4 @@
-import vue from 'rollup-plugin-vue2'
-import less from 'rollup-plugin-less'
+import vue from 'rollup-plugin-vue'
 import buble from 'rollup-plugin-buble'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
@@ -8,11 +7,30 @@ import livereload from 'rollup-plugin-livereload'
 import serve from 'rollup-plugin-serve'
 import replace from 'rollup-plugin-replace'
 import json from 'rollup-plugin-json'
+import less from 'less'
+import fs from 'fs'
+import LessPluginAutoPrefix from 'less-plugin-autoprefix'
+const autoprefixPlugin = new LessPluginAutoPrefix({ browsers: ['last 4 ios versions', 'last 3 Android versions', 'last 2 versions'] })
 
 const plugins = [
   json(),
-  vue(),
-  less({output: 'dist/build.css'}),
+  vue({
+    css (content, styles) {
+      const css = new Array(styles.length)
+      let counter = 0
+      styles.forEach(({ id, code }, index) => {
+        less.render(code, { filename: id, plugins: [autoprefixPlugin]}).then(function (output) {
+          counter++
+          css[index] = output.css
+          if (counter === styles.length) {
+            fs.writeFile('dist/build.css', css.join('\n'))
+          }
+        }).catch(function (err) {
+          console.log(err)
+        })
+      })
+    }
+  }),
   buble({
     objectAssign: 'Object.assign'
   }),

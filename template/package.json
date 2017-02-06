@@ -30,6 +30,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     {{/if_eq}}
+    "less": "^2.7.2",
+    "less-plugin-autoprefix": "^1.5.1",
     "ncp": "^2.0.0",
     "rollup": "^0.41.4",
     "rollup-plugin-buble": "^0.15.0",
@@ -41,7 +43,7 @@
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-serve": "^0.1.0",
     "rollup-plugin-uglify": "^1.0.1",
-    "rollup-plugin-vue2": "^0.8.0",
+    "rollup-plugin-vue": "^2.2.19",
     "rollup-watch": "^3.2.2"
   }
 }
